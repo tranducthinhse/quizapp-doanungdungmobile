@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.quizapp" />
-                  <option name="mobileSdkAppId" value="1:195081020852:android:79d2dca4ee24103343bee1" />
-                  <option name="projectId" value="doanungdung-60000" />
-                  <option name="projectNumber" value="195081020852" />
+                  <option name="mobileSdkAppId" value="1:119881435130:android:80641c4540a0d6466cc643" />
+                  <option name="projectId" value="tradeappproject-9f5f3" />
+                  <option name="projectNumber" value="119881435130" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
