@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+
+    <!-- Nền xanh dương -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M30,0 A30,30 0 1,0 30.01,0Z" />
+
+    <!-- Đầu trắng -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,15 A10,10 0 1,0 30.01,15Z" />
+
+    <!-- Thân người trắng -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,46 C20,39 26,34 33,34 C40,34 47,39 47,46 V50 H20 V46Z"/>
+</vector>

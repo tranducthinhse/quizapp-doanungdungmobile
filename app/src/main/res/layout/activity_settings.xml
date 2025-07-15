@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cài đặt"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_cancel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Background Music Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ic_music"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_music_note"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_background_music"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nhạc nền"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_music"
+                    app:layout_constraintEnd_toStartOf="@id/switch_background_music"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <Switch
+                    android:id="@+id/switch_background_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:contentDescription="Bật hoặc tắt nhạc nền"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Sound Effects Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ic_volume"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_volume_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_sound_effects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hiệu ứng âm thanh"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_volume"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_volume" />
+
+                <TextView
+                    android:id="@+id/tv_correct_sound"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Âm thanh trả lời đúng"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switch_correct_sound"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sound_effects" />
+
+                <Switch
+                    android:id="@+id/switch_correct_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:contentDescription="Bật hoặc tắt âm thanh trả lời đúng"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_correct_sound"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_correct_sound" />
+
+                <TextView
+                    android:id="@+id/tv_wrong_sound"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Âm thanh trả lời sai"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switch_wrong_sound"
+                    app:layout_constraintTop_toBottomOf="@id/tv_correct_sound" />
+
+                <Switch
+                    android:id="@+id/switch_wrong_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:contentDescription="Bật hoặc tắt âm thanh trả lời sai"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_wrong_sound"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_wrong_sound" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Timer per Question Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ic_timer"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_timer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_question_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Bộ đếm thời gian mỗi câu"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_timer"
+                    app:layout_constraintEnd_toStartOf="@id/switch_question_timer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <Switch
+                    android:id="@+id/switch_question_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:contentDescription="Bật hoặc tắt bộ đếm thời gian cho từng câu hỏi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Number of Questions Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ic_quiz"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_quiz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_question_count_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Số câu hỏi mỗi lần chơi"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_quiz"
+                    app:layout_constraintEnd_toStartOf="@id/tv_question_count"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_quiz" />
+
+                <TextView
+                    android:id="@+id/tv_question_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#007AFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_quiz" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_question_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:max="20"
+                    android:progress="5"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_quiz" />
+
+                <TextView
+                    android:id="@+id/tv_min_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:layout_marginStart="36dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seekbar_question_count" />
+
+                <TextView
+                    android:id="@+id/tv_max_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seekbar_question_count" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Total Test Timer Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ic_hourglass"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_hourglass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_total_timer_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian toàn bộ bài test"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_hourglass"
+                    app:layout_constraintEnd_toStartOf="@id/tv_total_timer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_hourglass" />
+
+                <TextView
+                    android:id="@+id/tv_total_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#007AFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_hourglass" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_total_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:max="30"
+                    android:progress="5"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_hourglass" />
+
+                <TextView
+                    android:id="@+id/tv_min_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1:00"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:layout_marginStart="36dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seekbar_total_timer" />
+
+                <TextView
+                    android:id="@+id/tv_max_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30:00"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seekbar_total_timer" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Avatar Selection Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ic_person"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_person"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_avatar_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn Avatar"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_person"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_person" />
+
+                <ImageView
+                    android:id="@+id/avatar_1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar_1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/avatar_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Avatar 1"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_person" />
+
+                <ImageView
+                    android:id="@+id/avatar_2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar_2"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/avatar_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Avatar 2"
+                    app:layout_constraintStart_toEndOf="@id/avatar_1"
+                    app:layout_constraintTop_toTopOf="@id/avatar_1" />
+
+                <ImageView
+                    android:id="@+id/avatar_3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar_3"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/avatar_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Avatar 3"
+                    app:layout_constraintStart_toEndOf="@id/avatar_2"
+                    app:layout_constraintTop_toTopOf="@id/avatar_1" />
+
+                <ImageView
+                    android:id="@+id/avatar_4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar_4"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/avatar_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Avatar 4"
+                    app:layout_constraintStart_toEndOf="@id/avatar_3"
+                    app:layout_constraintTop_toTopOf="@id/avatar_1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Action Buttons -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hủy"
+        android:textColor="#666666"
+        app:strokeColor="#AAAAAA"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_save" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Lưu"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#007AFF"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

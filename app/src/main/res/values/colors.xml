@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary Colors -->
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#42A5F5</color>
+    <color name="accent">#FF5722</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_white">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_blue_start">#2196F3</color>
+    <color name="gradient_blue_end">#1976D2</color>
+
+    <color name="gradient_green_start">#4CAF50</color>
+    <color name="gradient_green_end">#388E3C</color>
+
+    <color name="gradient_purple_start">#9C27B0</color>
+    <color name="gradient_purple_end">#7B1FA2</color>
+
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_shadow">#E0E0E0</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <color name="primary_color">#6C5CE7</color>
+    <color name="success_color">#00B894</color>
+    <color name="error_color">#E17055</color>
+    <color name="success_light">#E8F8F5</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="error_light">#F9D6D5</color>   <!-- đỏ nhạt -->
+    <color name="score_background">#F0F9FF</color>
+
+    <color name="primary">#6366F1</color>
+
+        <color name="success_dark">#059669</color>
+
+        <!-- Error Colors -->
+
+        <color name="error_dark">#DC2626</color>
+
+        <!-- Warning Colors -->
+
+        <color name="warning_light">#FEF3C7</color>
+        <color name="warning_dark">#D97706</color>
+
+        <!-- Background Colors -->
+
+        <color name="background_gray">#F1F5F9</color>
+
+        <!-- Text Colors -->
+
+        <color name="text_tertiary">#9CA3AF</color>
+        <color name="text_inverse">#FFFFFF</color>
+
+        <!-- Border Colors -->
+        <color name="border_light">#E5E7EB</color>
+        <color name="border_medium">#D1D5DB</color>
+        <color name="border_dark">#9CA3AF</color>
+
+        <!-- Common Colors -->
+        <color name="black">#000000</color>
+        <color name="transparent">#00000000</color>
+
+        <!-- Card Colors -->
+        <color name="card_elevation">#0F000000</color>
+
+        <!-- Option Colors -->
+        <color name="option_a">#EF4444</color>
+        <color name="option_b">#F59E0B</color>
+        <color name="option_c">#10B981</color>
+        <color name="option_d">#6366F1</color>
+
+        <color name="option_a_light">#FEE2E2</color>
+        <color name="option_b_light">#FEF3C7</color>
+        <color name="option_c_light">#D1FAE5</color>
+        <color name="option_d_light">#E0E7FF</color>
 </resources>
